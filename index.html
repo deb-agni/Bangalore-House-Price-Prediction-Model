@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bangalore Home Price Prediction</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='app.css') }}"/>
+</head>
+<body>
+  <div class="img"></div>
+  <div class="container">
+    <h1 class="title">🏠 Bangalore Home Price Prediction</h1>
+
+    <div class="form">
+      <label>Total Square Feet</label>
+      <input id="uiSqft" type="number" min="100" step="10" placeholder="e.g. 1200"/>
+
+      <label>Bath</label>
+      <select id="uiBathrooms"></select>
+
+      <label>BHK</label>
+      <select id="uiBHK"></select>
+
+      <label>Location</label>
+      <select id="uiLocations"></select>
+
+      <button id="estimateBtn">Estimate Price</button>
+    </div>
+
+    <div id="uiEstimatedPrice" class="result">—</div>
+  </div>
+
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
